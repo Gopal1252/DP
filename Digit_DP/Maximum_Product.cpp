@@ -4,6 +4,12 @@ using namespace std;
 #define ll long long
 string a,b;
 pair<ll,string> dp[19][2][2][2]; 
+//t1 = 1 tells whether the prefix is same as the lower limit so far
+//t2 = 1 tells whether the prefix is same as the upper limit so far
+
+//findMax returns {maxProd,actual String}
+//lead = 0 {means have encountered only zeroes so far}
+//lead = 1 {some non zero integer has been encountered}
 pair<ll,string> findMax(int pos, int t1, int t2, int lead){//{lead to know if the current position is leading zero}if lead == 0, it means that either it is the first pos from the left or we have only encountered 0's so far
     if(pos == a.length()) return {1,""};
 

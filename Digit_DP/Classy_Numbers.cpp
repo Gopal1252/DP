@@ -4,6 +4,9 @@ using namespace std;
 
 #define ll long long
 ll dp[19][4][2];
+//dp[pos][cnt][tight] tells the number of ways to fill up indicies from pos to n-1 such that 
+//number of non-zero digits {from pos to 19} + cnt <=3
+//Tight tells us whether the prefix before this is the same as in the higher limit or not 
 ll countCrazy(int pos, int cnt, int tight, string n){
     if(cnt>3) return 0;
     if(pos == n.length()) return 1;
