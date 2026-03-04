@@ -5,6 +5,7 @@ using namespace std;
 
 int n = 4;
 int dp[16][4];//dp[2^n][n] {the values the the bitmask can take}{the number of city}
+//dp[i][j] is a dp state where i represents the nodes visited and j shows that we reached this node now
 //Adj Matrix which defines the graph
 int dist[10][10] = {
     {0,20,42,25},
